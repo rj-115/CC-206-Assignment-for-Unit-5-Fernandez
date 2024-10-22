@@ -104,7 +104,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   setState(() {
                     addController1.clear();
                     addController2.clear();
-
                     sum = 0;
                   });
                 },
@@ -153,7 +152,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   setState(() {
                     minusController1.clear();
                     minusController2.clear();
-
                     minus = 0;
                   });
                 },
@@ -202,8 +200,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   setState(() {
                     multiplyController1.clear();
                     multiplyController2.clear();
-                    divideController1.clear();
-                    divideController2.clear();
                     multiply = 0;
                   });
                 },
