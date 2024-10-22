@@ -98,7 +98,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     setState(() {
                       sum = firstAddNum + secondAddNum;
                     });
-                  })
+                  }),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    addController1.clear();
+                    addController2.clear();
+
+                    sum = 0;
+                  });
+                },
+                child: const Text("Clear"),
+              ),
             ],
           ),
 
@@ -136,7 +147,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     setState(() {
                       minus = firstMinusNum - secondMinusNum;
                     });
-                  })
+                  }),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    minusController1.clear();
+                    minusController2.clear();
+
+                    minus = 0;
+                  });
+                },
+                child: const Text("Clear"),
+              ),
             ],
           ),
 
@@ -174,7 +196,19 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     setState(() {
                       multiply = firstMultiplyNum * secondMultiplyNum;
                     });
-                  })
+                  }),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    multiplyController1.clear();
+                    multiplyController2.clear();
+                    divideController1.clear();
+                    divideController2.clear();
+                    multiply = 0;
+                  });
+                },
+                child: const Text("Clear"),
+              ),
             ],
           ),
 
@@ -212,27 +246,18 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                     setState(() {
                       divide = firstDivideNum ~/ secondDivideNum;
                     });
-                  })
+                  }),
+              TextButton(
+                onPressed: () {
+                  setState(() {
+                    divideController1.clear();
+                    divideController2.clear();
+                    divide = 0;
+                  });
+                },
+                child: const Text("Clear"),
+              ),
             ],
-          ),
-          TextButton(
-            onPressed: () {
-              setState(() {
-                addController1.clear();
-                addController2.clear();
-                minusController1.clear();
-                minusController2.clear();
-                multiplyController1.clear();
-                multiplyController2.clear();
-                divideController1.clear();
-                divideController2.clear();
-                sum = 0;
-                minus = 0;
-                multiply = 0;
-                divide = 0;
-              });
-            },
-            child: const Text("Clear"),
           ),
         ],
       ),
